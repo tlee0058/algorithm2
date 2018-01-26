@@ -1,0 +1,9 @@
+function sigma(num){
+    var sum = 0;
+    for(var i = num; i > 0; i--){
+        sum += i;
+    }
+    console.log(sum);
+}
+sigma(3);
+sigma(5);
