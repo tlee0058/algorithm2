@@ -3,23 +3,23 @@ Kaitlin sees beauty in numbers, but also believes that less is more. Implement s
 
 Example: sumToOne(928) returns 1, because 9+2+8 = 19, then 1+9 = 10, then 1+0 = 1.*/
 
-function sumToOne(num){
+function sumToOne(n){
     var sum = 0;
-    var digit = 0;
-    for(var i = 0; i <= num; i++){
-        digit = Math.trunc(num/Math.pow(10, i)) % 10;
-        sum += digit;
+    while (n > 9) {
+        sum += Math.trunc(n / Math.pow(10, 0)) % 10;
+        while(n /10 >=1){
+            n = Math.trunc(n / 10);
+            sum += Math.trunc(n /Math.pow(10,0)) % 10;
+        }
+
+        n = sum;
+        sum = 0;
+    }
     
-        if(sum/10 < 1){
-            break;
-        }
-        else{
-            for(var k = 0; k=sum; k++){
-                digit = Math.trunc(sum/Math.pow(10, k)) % 10;
-                sum += digit;
-                }       
-            }   
-        }
-    console.log(sum);
-    };
-sumToOne(928);
+        console.log('n', n);
+        return n;
+}
+
+    sumToOne(928);
+    sumToOne(793);
+  
