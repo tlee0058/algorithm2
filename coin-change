@@ -1,0 +1,34 @@
+/*Generate Coin Change
+Change is inevitable (especially when you break a twenty!). Make generateCoinChange(cents). Accept a number of American cents, compute and print how to represent that amount with the smallest number of coins possible. Common American coins are penny (1 cent), nickel (5 cents), dime (10 cents) and quarter (25 cents).
+
+Example: Given generateCoinChange(94):
+
+94 cents can be represented by:
+
+quarters:	3
+dimes	1
+nickels:	1
+pennies:	4
+Second: Can you simplify/shorten your code?
+
+Third: Add half-dollar (50 cents) and dollar (100 cents) coins with 40 additional characters or less*/
+
+// function coinChange(cents){
+//     var quarters = Math.trunc(cents /25);
+//     var dimes = Math.trunc((cents - quarters*25) / 10);
+//     var nickels = Math.trunc((cents - quarters * 25 - dimes * 10) / 5);
+//     var pennies = cents - quarters * 25 - dimes * 10 - nickels* 5;
+
+//     console.log ('quarters: '+ quarters + "dimes: " + dimes + "nickels: " + nickels + "pennies: " + pennies);
+// }
+// coinChange(94);
+
+function coinChange(cents){
+    var quarters = Math.trunc(cents /25);
+    var dimes = Math.trunc((cents - quarters*25) / 10);
+    var nickels = Math.trunc((cents - quarters * 25 - dimes * 10) / 5);
+    var pennies = cents - quarters * 25 - dimes * 10 - nickels* 5;
+
+    console.log ('quarters: '+ quarters + "dimes: " + dimes + "nickels: " + nickels + "pennies: " + pennies);
+}
+coinChange(244);
