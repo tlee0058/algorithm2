@@ -7,24 +7,44 @@ Write a function drawCenterStars(num) that prints 75 characters total. The stars
 Optional: Create epic text-art Empire vs. Rebellion battle, using formations like "(=*=)" and ">o<". */
 
 
-function drawLeftStars(num){
-    var result = "";
-    for(var i = 0; i <= num; i++){
-       
-        console.log(result.repeat(i));
-    }
-};
+// function drawLeftStars(num) {
+// 	var str = "";
+// 	for(var i = 0; i < num; i++) {
+// 		str += "*";
+// 	}
+// 	for(var i = num; i < 75-num; i++){
+//         str += " ";
+//     }
+	
+// 	console.log(str);
+	
+// }
+// drawLeftStars(7);
 
-drawLeftStars(6);
+// function drawRightStars(num) {
+// 	var str = "";
+// 	for(var i = 0; i < 75; i++) {
+// 		if(i < num) {
+		
+// 			str += " ";
+// 		} else {
+			
+// 			str += "*";
+// 		}
+// 	}
+// 	console.log(str);
+// 	return str; 
+// };
+// drawRightStars(74);
 
-function drawRightStarts(){
-    var space = "&nbsp;";
-    for(var i = 0; i < 76; i++){
-        if( i = 75){
-            console.log("*");
+function drawCenterStars(num){
+    var str="";
+    for(var i = 0; i < 75; i++){
+        if(i === num/2){
+            str+="*";
         }
-        else {
-            console.log(space)};
-    }
+        str+=" ";
+        
+}   console.log(str);
 };
-drawRightStarts();
+drawCenterStars(30);
